@@ -46,6 +46,18 @@ int main() {
         printf("São diferentes\n");
     }
 
+    printf("\nDigite X para sair  \n");
+    char saida;
+    while(saida != 'X' && saida != 'x')
+    {
+        scanf(" %c", &saida);
+
+        if(saida != 'X' && saida != 'x') {
+            printf("Erro, digite novamente  \n");
+        }
+    }
+
+
     return 0;
 }
 
@@ -426,6 +438,8 @@ void menu() {
 
 
 
+
+
 #endif
 
 
@@ -523,7 +537,7 @@ void procurarRegistro(struct Registro *registros) {
         int j;
         for (j = 0; registros[i].nome[j] != '\0' && nome[j] != '\0'; ++j) {
             if (registros[i].nome[j] != nome[j]) {
-                break; // Caracteres diferentes, sair do loop interno
+                break;
             }
         }
 
